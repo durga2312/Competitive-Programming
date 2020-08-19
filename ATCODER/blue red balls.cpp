@@ -1,32 +1,42 @@
-//https://atcoder.jp/contests/abc158/tasks/abc158_b
-#include<bits/stdc++.h>
+//https://atcoder.jp/contests/abc154/tasks/abc154_a
+#include <bits/stdc++.h>
 #define ll long long int
 using namespace std;
 int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	ll n;
-	cin>>n;
+	string s;
+	cin>>s;
+	string t;
+	cin>>t;
+	ll a;
+	cin>>a;
 	ll b;
 	cin>>b;
-	ll r;
-	cin>>r;
-	ll sum=0;
-	sum=b+r;
-	ll a;
-	a=n/sum;
-	ll c;
-	c=n%sum;
-	ll ans=0;
-	if(c>=b)
+	ll aa;
+	ll bb;
+	string u;
+	cin>>u;
+	ll ls;
+	ls=s.length();
+	ll lu;
+	lu=u.length();
+	ll i;
+	for(i=0;i<lu;i++)
 	{
-		ans=(b*a)+b;
+		if(s[i]==u[i])
+		{
+			aa=a-1;
+			bb=b;
+		}
+		else
+		{
+			aa=a;
+			bb=b-1;
+		}
 	}
-	else
-	{
-		ans=(b*a)+c;
-	}
-	cout<<ans<<"\n";
+	cout<<aa<<"\n";
+	cout<<bb<<"\n";
 	return 0;
 }
